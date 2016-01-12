@@ -5,6 +5,7 @@ if RUBY_VERSION.to_f >= 1.9
     def mb_chars
       self.force_encoding(Encoding::UTF_8)
     end
+    
 
     alias_method(:orig_concat, :concat)
     def concat(value)
