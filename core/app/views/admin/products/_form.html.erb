@@ -68,20 +68,20 @@
     <p>
       <%= f.label "Item Type"%><br />
       <%= f.select:type_code, options_for_type, {}, prompt: 'Select One' %>
-        <% def options_for_type%>
+      <% def options_for_type%>
         <% [['Suit', 'A'], ['Dress Shirt', 'B'], ['Tie', 'C'], ['Blazer/Sport Jacket...', 'D'], ['Trouser/Suit Pant', 'E']] %>
-        <% end %>
       <% end %>
+  
     </p>
 
-    <p>
+    <!-- <p>
       <%= f.label "Item Style"%><br />
       <%= f.select(:style_code, :style_code) do %>
         <% [['Light Base No Pattern', '1'], ['Light Base Light Pattern', '2'], ['Light Base Heavy Pattern', '3'], ['Dark Base No Pattern', '4'], ['Dark Base Light Pattern', '5'], ['Dark Base Heavy Pattern', '6'], ['Solid, Light Base No Pattern', '1L'], ['Solid, Dark Base No Pattern', '1D'], ['Uniform Geometric Pattern, Light Base', '2L'], ['Uniform Geometric Pattern, Dark Base', '2D'], ['Power Stripes, Light Primary Base', '3L'], ['Power Stripes, Dark Primary Base', '3D'], ['Paisley, Light Base', '4L'], ['Paisley, Dark Base', '4D'], ['Narrow Stripe, Light Primary Base', '5L'], ['Narrow Stripe, Dark Primary Base', '5D']].each do |c| -%>
           <%= concat content_tag(:option, c.first, value: c.last) %>
         <% end %>
       <% end %>
-    </p>
+    </p> -->
 
   </div>
 </div>
