@@ -67,7 +67,7 @@
     <% end %>
     <p>
       <%= f.label "Item Type"%><br />
-      <%= f.select:type_code, options_for_type, {}, prompt: 'Select One' %>
+      <%= f.select :type_code, options_for_type, {}, prompt: 'Select One' %>
       <% def options_for_type%>
         <% [['Suit', 'A'], ['Dress Shirt', 'B'], ['Tie', 'C'], ['Blazer/Sport Jacket...', 'D'], ['Trouser/Suit Pant', 'E']] %>
       <% end %>
