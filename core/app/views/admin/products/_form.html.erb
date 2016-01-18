@@ -45,42 +45,21 @@
         <%= f.label :sku, t("sku") %><br />
         <%= f.text_field :sku, :size => 16 %>
       </p>
+
+      <p>
+        <%= f.label :outbound_link, t("outbound_link") %><br />
+        <%= f.text_field :outbound_link %>
+      </p>
       
-      <ul id="shipping-specs">
-        <li>
-          <%= f.label :weight, t("weight")%>
-          <%= f.text_field :weight, :size => 4 %>
-        </li>
-        <li>
-          <%= f.label :height, t("height")%>
-          <%= f.text_field :height, :size => 4 %>
-        </li>
-        <li>
-          <%= f.label :width, t("width")%>
-          <%= f.text_field :width, :size => 4 %>
-        </li>
-        <li>
-          <%= f.label :depth, t("depth")%>
-          <%= f.text_field :depth, :size => 4 %>
-        </li>
-      </ul>
     <% end %>
     <p>
       <%= f.label "Item Type"%><br />
-      <%= f.select(product, :type_code) do %>
-        <% [['Suit', 'A'], ['Dress Shirt', 'B'], ['Tie', 'C'], ['Blazer/Sport Jacket...', 'D'], ['Trouser/Suit Pant', 'E']].each do |c| -%>
-          <%= concat content_tag(:option, c.first, value: c.last) %>
-        <% end %>
-      <% end %>
+      <%= f.select(:type_code, [['Suit', 'A'], ['Dress Shirt', 'B'], ['Tie', 'C'], ['Blazer/Sport Jacket...', 'D'], ['Trouser/Suit Pant', 'E']]) %>
     </p>
 
     <p>
       <%= f.label "Item Style"%><br />
-      <%= f.select(product, :style_code) do %>
-        <% [['Light Base No Pattern', '1'], ['Light Base Light Pattern', '2'], ['Light Base Heavy Pattern', '3'], ['Dark Base No Pattern', '4'], ['Dark Base Light Pattern', '5'], ['Dark Base Heavy Pattern', '6'], ['Solid, Light Base No Pattern', '1L'], ['Solid, Dark Base No Pattern', '1D'], ['Uniform Geometric Pattern, Light Base', '2L'], ['Uniform Geometric Pattern, Dark Base', '2D'], ['Power Stripes, Light Primary Base', '3L'], ['Power Stripes, Dark Primary Base', '3D'], ['Paisley, Light Base', '4L'], ['Paisley, Dark Base', '4D'], ['Narrow Stripe, Light Primary Base', '5L'], ['Narrow Stripe, Dark Primary Base', '5D']].each do |c| -%>
-          <%= concat content_tag(:option, c.first, value: c.last) %>
-        <% end %>
-      <% end %>
+      <%= f.select(:style_code, [['Light Base No Pattern', '1'], ['Light Base Light Pattern', '2'], ['Light Base Heavy Pattern', '3'], ['Dark Base No Pattern', '4'], ['Dark Base Light Pattern', '5'], ['Dark Base Heavy Pattern', '6'], ['Solid, Light Base No Pattern', '1L'], ['Solid, Dark Base No Pattern', '1D'], ['Uniform Geometric Pattern, Light Base', '2L'], ['Uniform Geometric Pattern, Dark Base', '2D'], ['Power Stripes, Light Primary Base', '3L'], ['Power Stripes, Dark Primary Base', '3D'], ['Paisley, Light Base', '4L'], ['Paisley, Dark Base', '4D'], ['Narrow Stripe, Light Primary Base', '5L'], ['Narrow Stripe, Dark Primary Base', '5D']]) %>
     </p>
 
   </div>
