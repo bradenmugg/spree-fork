@@ -21,12 +21,12 @@
       <% end %>
     <% end %>
 
-    <% if @product.overlay %>
+    <% if @product.overlay.url != "/overlays/overlay/missing.png" %>
       <div>
         <%= image_tag(@product.overlay.url) %>
       </div>
     <% end %>
-    
+
   </div>
   <div class="yui-u">
     <%= hook :admin_product_form_right, locals do %>
