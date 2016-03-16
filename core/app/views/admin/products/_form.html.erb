@@ -20,6 +20,13 @@
         <%= f.error_message_on :description %>
       <% end %>
     <% end %>
+
+    <% if @product.overlay %>
+      <div>
+        <%= image_tag(@product.overlay.url) %>
+      </div>
+    <% end %>
+    
   </div>
   <div class="yui-u">
     <%= hook :admin_product_form_right, locals do %>
@@ -60,6 +67,11 @@
     <p>
       <%= f.label "Item Style"%><br />
       <%= f.select(:style_code, [['Light Base No Pattern', '1'], ['Light Base Light Pattern', '2'], ['Light Base Heavy Pattern', '3'], ['Dark Base No Pattern', '4'], ['Dark Base Light Pattern', '5'], ['Dark Base Heavy Pattern', '6'], ['Solid, Light Base No Pattern', '1L'], ['Solid, Dark Base No Pattern', '1D'], ['Uniform Geometric Pattern, Light Base', '2L'], ['Uniform Geometric Pattern, Dark Base', '2D'], ['Power Stripes, Light Primary Base', '3L'], ['Power Stripes, Dark Primary Base', '3D'], ['Paisley, Light Base', '4L'], ['Paisley, Dark Base', '4D'], ['Narrow Stripe, Light Primary Base', '5L'], ['Narrow Stripe, Dark Primary Base', '5D']]) %>
+    </p>
+
+    <p>
+      <%= f.label "Overlay Image"%> <br />
+      <%= f.file_field :overlay %>
     </p>
 
   </div>
