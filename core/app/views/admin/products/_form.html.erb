@@ -21,6 +21,11 @@
       <% end %>
     <% end %>
 
+    <p>
+      <%= f.label "User"%><br />
+      <%= f.select(:user_id, User.all.map { |u| [u.email, u.id]) %>
+    </p>
+
     <% if @product.overlay.url != "/overlays/overlay/missing.png" %>
       <div>
         <%= image_tag(@product.overlay.url) %>
