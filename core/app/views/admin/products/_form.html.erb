@@ -23,7 +23,7 @@
 
     <p>
       <%= f.label "User"%><br />
-      <%= f.select(:user_id, User.all.map { |u| [u.email, u.id] }) %>
+      <%= f.select(:user_id, User.all.map { |u| [u.email, u.id] }, :include_blank => true) %>
     </p>
 
     <% if @product.overlay.url != "/overlays/overlay/missing.png" %>
